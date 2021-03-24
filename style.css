@@ -11,12 +11,12 @@ body {
     background: radial-gradient(#fad0c4 0%, #ffd1ff 100%);
     color: #444444;
     text-align: center;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quote-container {
-    display: grid;
     font-family: 'Noto Serif', serif;
     width: auto;
     max-width: 48rem;
@@ -36,8 +36,8 @@ body {
     font-size: 2.5rem;
 }
 
-.fa-quote-left,
-.fa-quote.right {
+.fa-angle-double-left,
+.fa-angle-double-right {
     margin: 0;
     font-size: 3rem;
 }
@@ -51,8 +51,8 @@ body {
 }
 
 .button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
     margin-top: 1rem;
 }
 
@@ -82,10 +82,6 @@ button:active {
     transform: translate(0, 0.3rem);
 }
 
-.twitter-button {
-    justify-self: start;
-}
-
 .twitter-button:hover {
     color: #38a1f3;
 }
@@ -94,64 +90,32 @@ button:active {
     font-size: 1.5rem;
 }
 
-.new-quote {
-    justify-self: end;
+/* Loader */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgba(126, 168, 190, 0.7);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
-/* Loader */
-.loader,
-.loader:before,
-.loader:after {
-    border-radius: 50%;
-    width: 2.5em;
-    height: 2.5em;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation: load7 1.8s infinite ease-in-out;
-    animation: load7 1.8s infinite ease-in-out;
-}
-.loader {
-    color: #ffffff;
-    font-size: 10px;
-    margin: 80px auto;
-    position: relative;
-    text-indent: -9999em;
-    transform: translateZ(0);
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s;
-}
-.loader:before,
-.loader:after {
-    content: '';
-    position: absolute;
-    top: 0;
-}
-.loader:before {
-    left: -3.5em;
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
-}
-.loader:after {
-    left: 3.5em;
-}
-@-webkit-keyframes load7 {
-    0%,
-    80%,
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
     100% {
-        box-shadow: 0 2.5em 0 -1.3em;
-    }
-    40% {
-        box-shadow: 0 2.5em 0 0;
+        transform: rotate(360deg);
     }
 }
-@keyframes load7 {
-    0%,
-    80%,
-    100% {
-        box-shadow: 0 2.5em 0 -1.3em;
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
-    40% {
-        box-shadow: 0 2.5em 0 0;
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -162,6 +126,11 @@ button:active {
     }
 
     .quote-text {
-        font-style: 2.5rem;
+        font-size: 2.5rem;
+    }
+    .fa-angle-double-left,
+    .fa-angle-double-right {
+        margin: 0;
+        font-size: 2.5rem;
     }
 }
