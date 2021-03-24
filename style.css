@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(#fad0c4 0%, #ffd1ff 100%);
+    color: #444444;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.quote-container {
+    display: grid;
+    font-family: 'Noto Serif', serif;
+    width: auto;
+    max-width: 48rem;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0.6rem 0.6rem 0.6rem rgba(68, 68, 68, 0.2);
+}
+
+.quote-text {
+    margin-top: 1rem;
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+
+.long-quote {
+    font-size: 2.5rem;
+}
+
+.fa-quote-left,
+.fa-quote.right {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.quote-author {
+    font-family: 'Lexend', sans-serif;
+    margin-top: 1.25rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+}
+
+button {
+    width: 8rem;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    color: white;
+    background: rgba(126, 168, 190, 0.7);
+    outline: none;
+    box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(68, 68, 68, 0.1);
+    transition: 0.3s ease;
+    letter-spacing: 0.1rem;
+}
+
+button:hover {
+    -webkit-filter: brightness(125%);
+    filter: brightness(125%);
+}
+
+button:active {
+    transform: translate(0, 0.3rem);
+}
+
+.twitter-button {
+    justify-self: start;
+}
+
+.twitter-button:hover {
+    color: #38a1f3;
+}
+
+.fa-twitter {
+    font-size: 1.5rem;
+}
+
+.new-quote {
+    justify-self: end;
+}
+
+/* Loader */
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+    color: #ffffff;
+    font-size: 10px;
+    margin: 80px auto;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+.loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.loader:after {
+    left: 3.5em;
+}
+@-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+@keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+/* Media query: Tablet or smaller */
+@media screen and (max-width: 1000px) {
+    .quote-container {
+        margin: auto 0.6rem;
+    }
+
+    .quote-text {
+        font-style: 2.5rem;
+    }
+}

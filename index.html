@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quote Generator</title>
+        <link rel="icon" type="image/png" href="/angle-double-left-solid.svg" />
+        <script
+            src="https://kit.fontawesome.com/e1112371bd.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="quote-container" id="quote-container">
+            <!-- Quote -->
+            <div class="quote-text">
+                <i class="fas fa-angle-double-left"></i>
+                <span id="quote"></span>
+                <i class="fas fa-angle-double-right"></i>
+            </div>
+
+            <!-- Author -->
+            <div class="quote-author">
+                <span>- </span>
+                <span id="author"></span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-container">
+                <button class="twitter-button" id="twitter" title="Tweet This!">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="new-quote" id="new-quote">New Quote</button>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div class="loader" id="loader"></div>
+
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
+</html>
